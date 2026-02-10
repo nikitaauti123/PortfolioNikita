@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nikita | Frontend Developer</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Custom Styles -->
+  <style>
+    body {
+      background-color: #0b0f19;
+    }
+    .skill-badge {
+  width: 56px;
+  height: 56px;
+  border-radius: 9999px;
+  background: rgba(255,255,255,0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  transition: all 0.3s ease;
+}
+
+.skill-badge:hover {
+  transform: translateY(-6px) scale(1.05);
+}
+
+/* Brand colors */
+.skill-badge.html i { color: #e34f26; }
+.skill-badge.css i { color: #1572b6; }
+.skill-badge.js i { color: #f7df1e; }
+.skill-badge.react i { color: #61dafb; }
+.skill-badge.node i { color: #68a063; }
+.skill-badge.express i { color: #ffffff; }
+.skill-badge.mongo i { color: #4db33d; }
+.skill-badge.mysql i { color: #00758f; }
+
+/* Glow on hover */
+.skill-badge.html:hover { box-shadow: 0 0 25px #e34f2640; }
+.skill-badge.css:hover { box-shadow: 0 0 25px #1572b640; }
+.skill-badge.js:hover { box-shadow: 0 0 25px #f7df1e40; }
+.skill-badge.react:hover { box-shadow: 0 0 25px #61dafb40; }
+.skill-badge.node:hover { box-shadow: 0 0 25px #68a06340; }
+.skill-badge.mongo:hover { box-shadow: 0 0 25px #4db33d40; }
+.skill-badge.mysql:hover { box-shadow: 0 0 25px #00758f40; }
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+.animate-slideUp {
+  animation: slideUp 0.9s ease-out forwards;
+}
+
+/* Pills */
+.about-pill {
+  padding: 0.5rem 1rem;
+  font-size: 0.85rem;
+  border-radius: 9999px;
+  background: linear-gradient(135deg, #6366f1, #22d3ee);
+  color: white;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-pill:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(99, 102, 241, 0.35);
+}
+
+  </style>
+</head>
+
+<body class="text-gray-200 antialiased scroll-smooth selection:bg-indigo-500/30">
+
+  <!-- NAVBAR -->
+  <nav class="fixed w-full bg-[#0b0f19]/70 backdrop-blur-xl border-b border-white/5 z-50">
+    <div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
+      <h1 class="text-lg font-semibold tracking-wide text-white">
+        Nikita<span class="text-indigo-400">.</span>
+      </h1>
+
+      <div class="hidden md:flex gap-6 text-sm text-gray-400">
+        <a href="#about" class="hover:text-white transition">About</a>
+        <a href="#skills" class="hover:text-white transition">Skills</a>
+        <a href="#projects" class="hover:text-white transition">Projects</a>
+        <a href="#contact" class="hover:text-white transition">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="min-h-screen flex items-center relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-br from-indigo-500/10 via-transparent to-pink-500/10"></div>
+
+    <div class="max-w-7xl mx-auto px-6 py-10 grid md:grid-cols-2 gap-20 items-center relative z-10">
+
+      <!-- TEXT -->
+      <div class="space-y-4">
+   <h1 class="text-4xl md:text-5xl font-bold leading-tight text-white">
+  Hi, I’m <span class="text-indigo-400">Nikita</span>
+</h1>
+
+<h2 class="text-xl md:text-2xl mt-3 text-gray-300">
+  Full-Stack Developer
+</h2>
+
+<p class="mt-4 text-gray-400 max-w-xl">
+  Based in Pune, India. I have 3+ years of experience building
+  scalable, secure, backend-heavy web applications.
+</p>
+
+
+
+        <div class="flex gap-5 pt-6">
+          <a href="#projects"
+             class="px-7 py-3 rounded-xl bg-indigo-500 hover:bg-indigo-600 transition shadow-lg shadow-indigo-500/30">
+            View Projects
+          </a>
+
+          <a href="#contact"
+             class="px-7 py-3 rounded-xl border border-white/10 hover:bg-white hover:text-black transition">
+            Let’s Talk
+          </a>
+        </div>
+      </div>
+
+     <!-- IMAGE -->
+<div class="relative flex justify-center">
+  <div class="relative flex justify-center items-center group">
+    <!-- subtle ambient glow -->
+    <div
+      class="absolute -z-10 w-64 h-64 bg-indigo-500/10 blur-[100px] rounded-full
+             transition-opacity duration-500 group-hover:opacity-80">
+    </div>
+
+    <img
+      src="nikita.jpeg"
+      alt="Nikita"
+      class="relative w-56 md:w-64 lg:w-72 object-contain
+             transition-all duration-500 ease-out
+             group-hover:-translate-y-3
+             group-hover:scale-[1.02]
+             group-hover:drop-shadow-2xl"
+    />
+  </div>
+</div>
+
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="max-w-6xl mx-auto px-6 py-24">
+    <h2 class="text-3xl font-bold text-indigo-400 mb-6">About Me</h2>
+   <section class="max-w-4xl mx-auto text-center px-6">
+  <p class="text-gray-300 text-base md:text-lg leading-relaxed animate-fadeIn">
+    I’m a backend-focused full-stack developer who builds secure, scalable web applications.
+  </p>
+
+  <!-- Highlight Points -->
+  <div class="flex flex-wrap justify-center gap-4 my-6 animate-slideUp">
+    <span class="about-pill">API Design</span>
+    <span class="about-pill">Database Management</span>
+    <span class="about-pill">Server-side Architecture</span>
+  </div>
+
+  <p class="text-gray-300 text-base md:text-lg leading-relaxed animate-fadeIn delay-200">
+   I focus on building dynamic web applications with strong server-side handling, implementing backend logic, secure APIs, admin panels, dashboards, payment integrations, and real-time features.
+  </p>
+  <div class="mt-8">
+  <a
+    href="/NikitaAutiResume.pdf"
+    download
+      target="_blank"
+    class="inline-flex items-center gap-2 px-4 py-2 rounded-full
+           bg-white text-gray-900 text-sm font-medium
+           transition-all duration-300 ease-out
+           hover:-translate-y-0.5 hover:shadow-md"
+  >
+    <svg xmlns="http://www.w3.org/2000/svg"
+      class="w-4 h-4"
+      fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+        d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
+    </svg>
+    Download CV
+  </a>
+</div>
+
+</section>
+
+
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="bg-[#0f1629] py-24">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-3xl font-bold text-indigo-400 mb-10">Skills</h2>
+
+<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-10 max-w-5xl mx-auto mt-12">
+
+  <div class="flex flex-col items-center gap-3">
+    <div class="skill-badge html"><i class="devicon-html5-plain"></i></div>
+    <span class="text-sm text-gray-400">HTML</span>
+  </div>
+
+  <div class="flex flex-col items-center gap-3">
+    <div class="skill-badge css"><i class="devicon-css3-plain"></i></div>
+    <span class="text-sm text-gray-400">CSS</span>
+  </div>
+
+  <div class="flex flex-col items-center gap-3">
+    <div class="skill-badge js"><i class="devicon-javascript-plain"></i></div>
+    <span class="text-sm text-gray-400">JavaScript</span>
+  </div>
+
+  <div class="flex flex-col items-center gap-3">
+    <div class="skill-badge react"><i class="devicon-react-original"></i></div>
+    <span class="text-sm text-gray-400">React</span>
+  </div>
+
+  <div class="flex flex-col items-center gap-3">
+    <div class="skill-badge node"><i class="devicon-nodejs-plain"></i></div>
+    <span class="text-sm text-gray-400">Node.js</span>
+  </div>
+
+  <div class="flex flex-col items-center gap-3">
+    <div class="skill-badge express"><i class="devicon-express-original"></i></div>
+    <span class="text-sm text-gray-400">Express</span>
+  </div>
+
+  <div class="flex flex-col items-center gap-3">
+    <div class="skill-badge mongo"><i class="devicon-mongodb-plain"></i></div>
+    <span class="text-sm text-gray-400">MongoDB</span>
+  </div>
+
+  <div class="flex flex-col items-center gap-3">
+    <div class="skill-badge mysql"><i class="devicon-mysql-plain"></i></div>
+    <span class="text-sm text-gray-400">MySQL</span>
+  </div>
+  <!-- Next.js -->
+<!-- Next.js -->
+<div class="flex flex-col items-center gap-2">
+  <div class="skill-badge">
+    <i class="devicon-nextjs-plain"></i>
+  </div>
+  <span class="text-xs text-gray-400 tracking-wide">Next.js</span>
+</div>
+
+
+<!-- Angular -->
+<div class="flex flex-col items-center gap-2">
+  <div class="skill-badge">
+    <i class="devicon-angularjs-plain"></i>
+  </div>
+  <span class="text-xs text-gray-400 tracking-wide">Angular</span>
+</div>
+
+
+</div>
+
+
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="max-w-6xl mx-auto px-6 py-24">
+    <h2 class="text-3xl font-bold text-indigo-400 mb-10">Projects</h2>
+
+    <div class="grid md:grid-cols-2 gap-8">
+     
+
+      <div class="bg-[#0f1629] p-6 rounded-2xl border border-white/10 hover:border-indigo-400/40 transition">
+       <h3 class="text-xl font-semibold mb-2">
+  Elevate Trips System
+</h3>   <p class="text-gray-400">
+  End-to-end travel booking platform with Holiday, Flight, and Hotel modules.
+  Built using Next.js, Angular, Node.js, MySQL, and TypeORM, featuring real-time
+  search, secure Razorpay payments, coupon management, and a full-featured
+  admin dashboard.
+</p>
+      </div>
+       <div class="bg-[#0f1629] p-6 rounded-2xl border border-white/10 hover:border-indigo-400/40 transition">
+      <h3 class="text-xl font-semibold mb-2">
+  Aviator Game – Real-Time MERN Application
+</h3>
+
+<p class="text-gray-400">
+  Built an interactive real-time Aviator game using the MERN stack, focusing on
+  backend-driven game logic, multiplayer handling, and live updates. Implemented
+  secure authentication, betting logic, and real-time synchronization using
+  Node.js, Express.js, MongoDB, and Socket.io, with a responsive React-based
+  interface for seamless gameplay.
+</p>
+
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="bg-[#0f1629] py-24">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold text-indigo-400 mb-6">Contact</h2>
+      <p class="text-gray-400 mb-6">
+        Want to collaborate or discuss Fullstack projects?
+      </p>
+
+      <p class="text-indigo-400 font-medium text-lg">
+       nikitaauti123@gmail.com
+      </p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="text-center py-6 text-gray-500 text-sm border-t border-white/5">
+    © 2026 Nikita. Crafted with care.
+  </footer>
+
+</body>
+</html>
